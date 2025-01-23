@@ -10,6 +10,7 @@
             margin: 0;
             font-family: Arial, sans-serif;
             color: #fff;
+            background-image:url("https://img.freepik.com/premium-photo/neon-netflix_644450-22488.jpg?w=1060");
             background-color: #000;
           } 
           header{
@@ -19,10 +20,15 @@
             padding: 20px 50px;
             background: rgba(0,0,0, 0.8);
           }
-          .logo{
-            height: 50;
+          .logo img{
+            height: 50px;
           }
-          .top-buttons{
+          .top-buttons {
+            display:flex;
+            gap:15px;
+
+          }
+          .top-buttons button{
            margin-left: 15px;
            padding: 8px 15px;
            font-size: 14px;
@@ -38,6 +44,7 @@
           }
           main{
             margin-top: 100px;
+            text-align: center;
           }
           h1{
             font-size: 2.5rem;
@@ -76,7 +83,7 @@
 </head>
 <body>
     <header>
-        <div class="container">
+        
             <!-- Netflix Logo -->
             <div class="logo">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo">
@@ -86,13 +93,13 @@
                 <button class="language-btn">Language</button>
                 <button class="signin-btn">Sign In</button>
             </div>
-        </div>
+        
     </header>
 
     <main>
         <!-- Centered Content -->
         <div class="mid-content">
-            <h1>Unlimited movies, TV shows, and more.</h1>
+            <h1><b>Unlimited movies, TV shows, and more.</b></h1>
             <h2>Watch anywhere. Cancel anytime.</h2>
             <p>Ready to watch? Enter your email to create or restart your membership.</p>
             <div class="email-box">
