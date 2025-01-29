@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            overflow-y: scroll;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-details {
+            padding: 15px;
+        }
+
+        .product-title {
+            font-size: 18px;
+            color: #333;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        .product-type {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            font-size: 16px;
+            color: #007BFF;
+            margin: 0;
+        }
+
+        .buy-now {
+            display: block;
+            margin-top: 15px;
+            text-align: center;
+            background: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .buy-now:hover {
+            background: #0056b3;
+        }
+
+        .product-reviews {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .ratings {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .ratings h2 {
+            font-size: 18px;
+            margin: 0 0 10px;
+            color: #333;
+        }
+
+        .ratings p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .scroll-container {
+            max-height: 400px;
+            overflow-y: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Product List</h1>
+        <div class="scroll-container">
+            <div class="product-list">
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/41U94WhXKfL.AC_SX250.jpg">
+                    <div class="product-details">
+                        <h3 class="product-title">CVANU Birds & Branch Self-Adhesive Vinyl Wall Sticker for Wall Decoration</h3>
+                        <p class="product-type">Room decor</p>
+                        <p class="product-price">$25.00</p>
+                        <p class="product-reviews">Reviews: 4.5/5 (20 reviews)</p>
+                        <a href="#" class="buy-now">Buy Now</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/41+FyDWKlcL.AC_SX250.jpg" alt="Product 2">
+                    <div class="product-details">
+                        <h3 class="product-title">CVANU World Trip Self-Adhesive Vinyl Wall Sticker for Wall Decoratio</h3>
+                        <p class="product-type">Room decor</p>
+                        <p class="product-price">$28.00</p>
+                        <p class="product-reviews">Reviews: 4.0/5 (15 reviews)</p>
+                        <a href="#" class="buy-now">Buy Now</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/41yj2-1ywkL._SX300_SY300_QL70_FMwebp_.jpg" alt="Product 3">
+                    <div class="product-details">
+                        <h3 class="product-title">CVANU Tree & Women Self-Adhesive Vinyl Wall Sticker for Wall Decoration </h3>
+                        <p class="product-type">Room decor</p>
+                        <p class="product-price">$30.00</p>
+                        <p class="product-reviews">Reviews: 4.8/5 (50 reviews)</p>
+                        <a href="#" class="buy-now">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ratings">
+            <h2>Page Ratings and Reviews</h2>
+            <p>Overall Rating: 4.5/5</p>
+            <p>Total Reviews: 120</p>
+        </div>
+    </div>
+</body>
+</html>
