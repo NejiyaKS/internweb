@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Letter Reveal Game</title>
+    <style>
+        .letter {
+            display:inline-block;
+            width: 50px;
+            line-height: 2cap;
+            margin-right: 25px;
+            border-bottom: 2px solid rgb(133, 61, 204);
+            text-align:center;
+        }
+        button{
+            margin-top:10px;
+            background-color:rgb(38, 222, 44);
+            color:rgb(74, 20, 124);
+            margin-right: 5px;
+            border-radius:50px;
+        }
+        button:disabled {
+            background-color: #be3d4e;
+        }
+    </style>
+</head>
+<body>
+    <div id="wordDisplay"></div>
+    <div id="buttonContainer"></div>
+
+    <script>
+        const word = "NEJIYA";//reveals the word 
+
+        // References to display areas
+        const wordDisplay = document.getElementById("wordDisplay");
+        const buttonContainer = document.getElementById("buttonContainer");
+
+        // Display letter placeholders
+        const letters = [];
+        for (let i = 0; i < word.length; i++) {
+            const letter = document.createElement("span");
+            letter.className = "letter"; // Apply style
+            letter.textContent = ""; // Empty initially
+            wordDisplay.appendChild(letter);
+            letters.push(letter); 
+        }
+
+        // Create buttons for each letter
+        for (let i = 0; i < word.length; i++) {
+            const button = document.createElement("button");
+            button.textContent = `Reveal ${i + 1}`; 
+            button.addEventListener("click", function () {
+                letters[i].textContent = word[i]; // Reveals the letter
+                button.disabled = true; // Disables button
+            });
+            buttonContainer.appendChild(button); // Add button to page
+        }
+    </script>
+</body>
+</html>
